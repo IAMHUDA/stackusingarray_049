@@ -60,8 +60,21 @@ int main() {
 		char ch = (input.empty() ? '0' : input[0]);
 		switch (ch) {
 		case '1': {
-
+			cout << "\nstack is empty." << endl;
+			string element;
+			getline(cin, element);
+			s.push(element);
+			break;
 		}
+		case '2':
+			s.display();
+			break;
+		case '4':
+			return 0;
+
+		default:
+			cout << "\ninvalid choice." << endl;
+			break;
 		}
 
 	}
