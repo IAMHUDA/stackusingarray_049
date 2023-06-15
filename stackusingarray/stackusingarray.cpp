@@ -28,6 +28,10 @@ public:
 			return;
 		}
 		cout << "the popped element is" << stack_array[top] << endl;
+		top--;
+	}
+	bool empty() {
+
 	}
 };
 
