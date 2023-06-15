@@ -23,7 +23,11 @@ public:
 		return element;
 	}
 	void pop() {
-
+		if (empty()) {
+			cout << "stack empty cannot pop" << endl;
+			return;
+		}
+		cout << "the popped element is" << stack_array[top] << endl;
 	}
 };
 
