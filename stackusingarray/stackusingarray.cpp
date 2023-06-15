@@ -52,8 +52,8 @@ int main() {
 		cout << "\n * **stack menu * **\n";
 		cout << "1.push\n";
 		cout << "2.pop\n";
-		cout << "3.display";
-		cout << "4.exit";
+		cout << "3.display\n";
+		cout << "4.exit\n";
 		cout << "\nenter your choice: ";
 		string input;
 		getline(cin, input);
@@ -67,9 +67,18 @@ int main() {
 			break;
 		}
 		case '2':
-			s.display();
+			if (s.empty()) {
+				cout << "\nstack is empty" << endl;
+				break;
+			}
+			s.pop();
 			break;
-		case '4':
+
+		case '3':
+			s.display();
+			return 0;
+
+		case'4' :
 			return 0;
 
 		default:
