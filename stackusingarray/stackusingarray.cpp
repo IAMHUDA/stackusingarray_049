@@ -18,7 +18,7 @@ public:
 		top++;
 		stack_array[top] = element;
 		cout << endl;
-		cout << element << "ditambahkan(pushed)" << endl;
+		cout << element << ": ditambahkan(pushed)" << endl;
 
 		return element;
 	}
@@ -27,7 +27,7 @@ public:
 			cout << "stack empty cannot pop" << endl;
 			return;
 		}
-		cout << "the popped element is" << stack_array[top] << endl;
+		cout << "the popped element is : " << stack_array[top] << endl;
 		top--;
 	}
 	bool empty() {
@@ -60,7 +60,7 @@ int main() {
 		char ch = (input.empty() ? '0' : input[0]);
 		switch (ch) {
 		case '1': {
-			cout << "\nstack is empty." << endl;
+			cout << "\nenter an element:" << endl;
 			string element;
 			getline(cin, element);
 			s.push(element);
@@ -76,7 +76,7 @@ int main() {
 
 		case '3':
 			s.display();
-			return 0;
+			break;
 
 		case'4' :
 			return 0;
